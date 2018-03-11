@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>WikiViewer</title>
+  
+  
+  <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<main id="app">
+  <div class="packing" id="search" v-bind:class="{fullheight: mainActive}"><a href="http://en.wikipedia.org/wiki/Special:Random" target="_blank">Click here for a random article</a>
+    <form v-on:submit.prevent="onSubmit" v-bind:class="{open: openActive}">
+      <input type="text" v-model="searchData" v-on:keyup.enter="wikisearch"/>
+      <div class="xxx" v-on:click="openclass"></div>
+    </form>
+    <p v-bind:class="{hide: hideActive}">Click icon to search</p>
+  </div>
+  <div class="packing" id="list" v-if="wikiData != &quot;&quot;">
+    <ul><a v-for="wiki in wikiData.query.pages" v-bind:href="pageUrl + wiki.pageid" target="_blank">
+        <li>
+          <h1>{{wiki.title}}</h1>
+          <p>{{wiki.extract}}</p>
+        </li></a></ul>
+  </div>
+</main>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/vue-resource@1.3.5'></script>
+<script  src="js/index.js"></script>
+
+</body>
+</html>

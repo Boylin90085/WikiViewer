@@ -1,0 +1,142 @@
+$color_orange: #fe3629
+$color_gray: #3c3c3c
+*
+  // border: 1px solid
+  box-sizing: border-box
+  position: relative
+
+html,body,main
+  margin: 0px
+  padding: 0px
+  width: 100%
+  height: 100%
+  background-color: $color_orange
+  // color: #DB381B
+
+.packing
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  padding-top: 50px
+.fullheight
+  height: 100%
+  padding: 0px
+
+#search
+    transition: 0.3s
+  a
+    color: $color_gray
+    text-decoration: none
+  p
+    color: $color_gray
+    margin: 0px
+  form
+    position: relative
+    border: 3px solid $color_gray
+    border-radius: 50px
+    width: 33px
+    height: 32px
+    transition: 0.3s
+    transition-delay: 0.3s
+    margin: 15px 0px 15px 0px
+    &:before
+      content: ""
+      position: absolute
+      display: inline-block
+      border: 1px solid $color_gray
+      width: 0px
+      height: 15px
+      right: -4px
+      bottom: -11px
+      transform: rotate(-45deg)
+      transition: 0.3s
+      transition-delay: 0.6s
+
+  input
+    border: none
+    background-color: transparent
+    width: 100%
+    height: 100%
+    outline: none
+    padding-left: 15px
+    padding-right: 20px
+    color: $color_gray
+  .xxx
+    position: absolute
+    // border: 2px solid
+    width: 30px
+    height: 30px
+    right: 0px
+    top: 0px
+    cursor: pointer
+    &:before, &:after
+      content: ''
+      position: absolute
+      border: 1px solid $color_gray
+      height: 2px
+      right: 5px
+      transition: 0.3s
+    &:before
+      top: -1px
+      transform: rotate(45deg)
+      transition-delay: 0.1s
+    &:after
+      bottom: 3px
+      transform: rotate(-45deg)
+
+  form.open
+    width: 210px
+    &:before
+      height: 0px
+      right: 2px
+      bottom: 1px
+      transition: 0.3s
+      
+    .xxx
+      &:before, &:after
+        height: 12px
+        right: 15px
+      &:before
+        top: 8px
+      &:after
+        bottom: 10px
+        transition-delay: 0.2s
+      
+      
+      
+      
+      
+#list
+  ul
+    padding-left: 0px
+    width: 80%
+    a
+      text-decoration: none
+    li
+      
+      list-style: none
+      margin: 0px
+      margin-bottom: 10px
+      padding: 10px
+      background-color: #D1D1D1
+      color: $color_gray
+      animation: Admission 1s
+      &:hover
+        
+        border-left: 10px solid $color_gray
+  
+.hide
+  display: none
+      
+      
+      
+      
+      
+@keyframes Admission
+  0%
+    transform: translateY(2000px)
+  100%
+    transform: translateY(0px)
+      
+    

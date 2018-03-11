@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+  position: relative;
+}
+
+html, body, main {
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #fe3629;
+}
+
+.packing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.fullheight {
+  height: 100%;
+  padding: 0px;
+}
+
+#search a {
+  color: #3c3c3c;
+  text-decoration: none;
+}
+#search p {
+  color: #3c3c3c;
+  margin: 0px;
+}
+#search form {
+  position: relative;
+  border: 3px solid #3c3c3c;
+  border-radius: 50px;
+  width: 33px;
+  height: 32px;
+  transition: 0.3s;
+  transition-delay: 0.3s;
+  margin: 15px 0px 15px 0px;
+}
+#search form:before {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  border: 1px solid #3c3c3c;
+  width: 0px;
+  height: 15px;
+  right: -4px;
+  bottom: -11px;
+  transform: rotate(-45deg);
+  transition: 0.3s;
+  transition-delay: 0.6s;
+}
+#search input {
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding-left: 15px;
+  padding-right: 20px;
+  color: #3c3c3c;
+}
+#search .xxx {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0px;
+  top: 0px;
+  cursor: pointer;
+}
+#search .xxx:before, #search .xxx:after {
+  content: "";
+  position: absolute;
+  border: 1px solid #3c3c3c;
+  height: 2px;
+  right: 5px;
+  transition: 0.3s;
+}
+#search .xxx:before {
+  top: -1px;
+  transform: rotate(45deg);
+  transition-delay: 0.1s;
+}
+#search .xxx:after {
+  bottom: 3px;
+  transform: rotate(-45deg);
+}
+#search form.open {
+  width: 210px;
+}
+#search form.open:before {
+  height: 0px;
+  right: 2px;
+  bottom: 1px;
+  transition: 0.3s;
+}
+#search form.open .xxx:before, #search form.open .xxx:after {
+  height: 12px;
+  right: 15px;
+}
+#search form.open .xxx:before {
+  top: 8px;
+}
+#search form.open .xxx:after {
+  bottom: 10px;
+  transition-delay: 0.2s;
+}
+
+#list ul {
+  padding-left: 0px;
+  width: 80%;
+}
+#list ul a {
+  text-decoration: none;
+}
+#list ul li {
+  list-style: none;
+  margin: 0px;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #D1D1D1;
+  color: #3c3c3c;
+  animation: Admission 1s;
+}
+#list ul li:hover {
+  border-left: 10px solid #3c3c3c;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes Admission {
+  0% {
+    transform: translateY(2000px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
